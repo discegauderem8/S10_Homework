@@ -1,9 +1,9 @@
 
 def first_computer_move(n, m):
     move = 0
-    if n % (m + 1) & n % m <= m & n % (m+1) < 0:
+    if n % (m+1) != 0:
         move = n % (m + 1)
-    elif n % m & n % m <= m & n % (m+1) < 0:
+    elif n % m != 0:
         move = n % m
     else:
         move = 1
@@ -26,10 +26,10 @@ def other_computer_moves(x):
     with open("max_move.txt", "r", encoding="UTF-8") as file:
         reader = file.read()
         m = int(reader[0])
-    if (x <= m):
-        if n % (m + 1) & n % m <= m:
+    if x <= m:
+        if n % (m+1) != 0:
             move = n % (m + 1)
-        elif n % m & n % m <= m:
+        elif n % m != 0:
             move = n % m
         else:
             move = 1

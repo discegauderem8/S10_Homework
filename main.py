@@ -1,7 +1,7 @@
 from aiogram import Bot, Dispatcher, executor, types
 import game
 
-API_TOKEN = 'TOKEN'
+API_TOKEN = 'YOUR TOKEN HERE'
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
